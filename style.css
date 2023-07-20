@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+body {
+    font-family: 'Poppins', Arial;
+    background-color: antiquewhite;
+    /* /* background: url(./assets/images/image1.jpg) center/cover;*/
+    /* VH = 100% de la taille de l'écran */
+    /* min-height: 100vh;  */
+}
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    /* Les tailles de polices doivent être en REM */
+    font-size: 2.5rem;
+    text-shadow: -3px 4px 8px #00000085;
+    color: rgb(118, 60, 212);
+}
+main{
+   min-height: 500px; 
+   width: 90%;
+   background-color: rgb(93, 163, 163);
+   /* centrer une boîte */
+   margin: 0 auto;
+   border: 2px solid rgb(60, 60, 88);
+   border-radius: 10px;
+   box-shadow: 0 0 20px #000000;
+   padding: 15px;
+}
+h2 {
+    margin: 0;
+}
+.flexbox, .grid, .absolute {
+    border: 2px solid skyblue;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+/* Grid G1 */
+
+#G1 img {
+    width:40%;
+}
+
+.grid-container2 {
+    display: grid;
+   grid-template-columns: 70% 30%;
+}
+
+/* FLEXBOX  */
+/* Sert à répartir équitablement nos boîtes */
+.flexbox ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.flexbox li {
+    list-style: none;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    background-color: turquoise;
+    border-radius: 10px;
+    padding: 5px;
+    /* Centrer un unique élément verticalement et horizontalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GRID  */
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.grid img {
+    width: 80%;
+    margin: 20px auto;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "i1 i2"
+    "ta ta"
+    "vi bt";
+}
+
+input, textarea {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid darkblue;
+    font-size: 1.1rem; 
+    font-family: "Poppins";
+    border-radius: 5px;
+}
+
+textarea {
+    grid-area: ta;
+    height: 40px;
+    resize: none;
+}
+
+#btn-submit {
+    grid-area: bt;
+    cursor: pointer;
+    background-color: rgb(139, 231, 231);
+    transition: 0.2s;
+}
+
+#btn-submit:hover {
+    background: darkblue;
+    color: white; 
+}
+
+/* ABSOLUTE  */
+/* Sans élément en Relative, de base,
+l'élément en absolute l'est par rapport au Body */
+/* Il faut mettre une position relative au parent pour 
+contraindre l'élément en absolute dans ses frontières  */
+.absolute {
+    min-height: 100px;
+    position: relative;
+}
+#circle1 {
+    height: 80px;
+    width: 80px;
+    background: skyblue;
+    position: absolute;
+    border-radius: 150px;
+    top: 0;
+    right: 0;
+}
+
+#circle2 {
+    height: 40px;
+    width: 40px;
+    border-radius: 150px;
+    background: teal;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 70px;
+}
